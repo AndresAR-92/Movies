@@ -4,6 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>My Movies</h1>
+    </header>
+
+    <dialog id="movieModal">
+      <form action="">
+        <ul class="movie-form">
+          <li class="form-el">
+            <label for="form-title">Title</label>
+            <input id="form-title" type="text" />
+          </li>
+          <li class="form-el">
+            <label for="form-year">Release Year</label>
+            <input id="form-year" type="number" min="1900" max="2035" />
+          </li>
+          <li class="form-el">
+            <label for="form-director">Director</label>
+            <input id="form-director" type="text" />
+          </li>
+          <li class="form-el">
+            <label for="form-cast">Cast</label>
+            <input
+              id="form-cast"
+              type="text"
+              placeholder="Emma Watson, Daniel Radcliffe"
+            />
+          </li>
+        </ul>
+        <div>
+          <input type="submit" id="submit" value="Add" />
+          <input type="submit" id="cancel" value="Cancel" />
+        </div>
+      </form>
+    </dialog>
+    <div class="btn-container">
+      <button id="showModal">Add Movie</button>
+    </div>
+
+    <main>
+      <div class="movies"></div>
+    </main>
+  </body>
 </html>
